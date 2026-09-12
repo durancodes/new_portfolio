@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Duranjai Venkatachalapathi — AI Engineer</title>
+<meta name="description" content="AI Engineer specializing in LLM integration, RAG pipelines and real-time computer vision.">
+<meta property="og:title" content="Duranjai Venkatachalapathi — AI Engineer">
+<meta property="og:description" content="AI Engineer specializing in LLM integration, RAG pipelines and real-time computer vision.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2308090a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%234fd9bd'/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #08090a; color: #e9ebea; font-family: 'Space Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: oklch(0.82 0.13 172); text-decoration: none; }
+  a:hover { color: oklch(0.9 0.09 172); }
+  ::selection { background: oklch(0.82 0.13 172 / 0.25); }
+  @keyframes pulseDot { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(0.8); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes wordIn { from { opacity: 0; transform: translateY(0.5em) rotate(1.2deg); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
+  @keyframes gridDrift { from { transform: translate3d(0,0,0); } to { transform: translate3d(0,-72px,0); } }
+  @keyframes scan { 0% { transform: translateY(-10vh); opacity: 0; } 12% { opacity: 0.6; } 88% { opacity: 0.6; } 100% { transform: translateY(110vh); opacity: 0; } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes orbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @keyframes caret { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</helmet>
+
+<div style="min-height: 100vh; position: relative; background: radial-gradient(1200px 600px at 70% -10%, oklch(0.82 0.13 172 / 0.08), transparent 70%), #08090a;">
+
+  <div style="position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;">
+    <div style="position: absolute; inset: -80px; background-image: linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px); background-size: 72px 72px; mask-image: radial-gradient(900px 700px at 60% 12%, #000 0%, transparent 78%); -webkit-mask-image: radial-gradient(900px 700px at 60% 12%, #000 0%, transparent 78%); animation: gridDrift 14s linear infinite;"></div>
+    <div style="position: absolute; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, oklch(0.82 0.13 172 / 0.55), transparent); animation: scan 9s cubic-bezier(0.4,0,0.6,1) infinite;"></div>
+    <canvas data-neural="1" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.75;"></canvas>
+    <div data-glow="1" style="position: absolute; inset: 0; opacity: 0; transition: opacity 600ms ease;"></div>
+  </div>
+
+  <div data-progress="1" style="position: fixed; top: 0; left: 0; height: 2px; width: 0%; z-index: 90; background: linear-gradient(90deg, oklch(0.82 0.13 272), oklch(0.82 0.13 172)); box-shadow: 0 0 12px oklch(0.82 0.13 172 / 0.6);"></div>
+
+  <div style="position: relative; z-index: 2;">
+
+  <nav style="position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); background: rgba(8,9,10,0.72); border-bottom: 1px solid rgba(255,255,255,0.07);">
+    <div style="max-width: 1080px; margin: 0 auto; padding: 16px 28px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+      <a href="#top" style="color: #e9ebea; font-weight: 600; letter-spacing: -0.01em; font-size: 15px; display: flex; align-items: center; gap: 9px;">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: oklch(0.82 0.13 172); animation: pulseDot 2.6s ease-in-out infinite;"></span>
+        Duranjai V
+      </a>
+      <div style="flex: 1;"></div>
+      <div style="display: flex; align-items: center; gap: 22px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; flex-wrap: wrap;">
+        <a href="#work" style="color: #9aa3a0;" style-hover="color: #e9ebea;">Work</a>
+        <a href="#experience" style="color: #9aa3a0;" style-hover="color: #e9ebea;">Experience</a>
+        <a href="#stack" style="color: #9aa3a0;" style-hover="color: #e9ebea;">Stack</a>
+        <a href="#credentials" style="color: #9aa3a0;" style-hover="color: #e9ebea;">Credentials</a>
+        <a href="mailto:jaij6309@gmail.com" style="color: #08090a; background: oklch(0.82 0.13 172); padding: 8px 14px; border-radius: 999px; font-weight: 500;" style-hover="background: oklch(0.9 0.09 172); color: #08090a;">Get in touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" style="max-width: 1080px; margin: 0 auto; padding: 96px 28px 72px;">
+    <div style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 7px 14px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa3a0; animation: rise 0.6s ease both;">
+      <span style="width: 6px; height: 6px; border-radius: 50%; background: oklch(0.82 0.13 172);"></span>
+      AI Engineer · Chennai, India
+    </div>
+    <h1 style="margin: 26px 0 0; font-size: clamp(38px, 7vw, 74px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 600; max-width: 15ch; text-wrap: balance; display: flex; flex-wrap: wrap; gap: 0 0.28em;">
+      <span style="display: inline-block; animation: wordIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.05s both;">I</span>
+      <span style="display: inline-block; animation: wordIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.12s both;">build</span>
+      <span style="display: inline-block; animation: wordIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.19s both;">intelligent</span>
+      <span style="display: inline-block; animation: wordIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.26s both;">systems</span>
+      <span style="display: inline-block; animation: wordIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.33s both;">that</span>
+      <span style="display: inline-block; animation: wordIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.4s both; color: oklch(0.82 0.13 172);">ship.</span>
+      <span style="display: inline-block; width: 0.09em; height: 0.78em; align-self: center; background: oklch(0.82 0.13 172); animation: caret 1.1s steps(1) 1.2s infinite;"></span>
+    </h1>
+    <p style="margin: 28px 0 0; max-width: 62ch; font-size: 17.5px; line-height: 1.65; color: #a7afac; text-wrap: pretty; animation: rise 0.8s ease both;">
+      Results-driven AI Engineer focused on bridging the gap between cutting-edge machine learning research and scalable product development. Expert in architecting end-to-end intelligent systems, specializing in Large Language Model (LLM) integration, Retrieval-Augmented Generation (RAG) pipelines, and real-time computer vision applications.
+    </p>
+    <p style="margin: 18px 0 0; max-width: 62ch; font-size: 17.5px; line-height: 1.65; color: #a7afac; text-wrap: pretty;">
+      Committed to building robust, evaluable AI solutions that prioritize accuracy, performance, and seamless user experiences.
+    </p>
+
+    <div style="margin-top: 40px; display: flex; gap: 12px; flex-wrap: wrap;">
+      <a href="https://github.com/durancodes" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 12px 18px; color: #e9ebea; font-size: 14.5px; font-weight: 500;" style-hover="border-color: oklch(0.82 0.13 172 / 0.55); color: #e9ebea;">GitHub <span style="font-family: 'JetBrains Mono', monospace; color: #7e8784; font-size: 12px;">/durancodes</span></a>
+      <a href="https://www.linkedin.com/in/duranjai-v-a9b05021a" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 12px 18px; color: #e9ebea; font-size: 14.5px; font-weight: 500;" style-hover="border-color: oklch(0.82 0.13 172 / 0.55); color: #e9ebea;">LinkedIn</a>
+      <a href="https://medium.com/@jaij6309" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 12px 18px; color: #e9ebea; font-size: 14.5px; font-weight: 500;" style-hover="border-color: oklch(0.82 0.13 172 / 0.55); color: #e9ebea;">Medium</a>
+      <a href="mailto:jaij6309@gmail.com" style="display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 12px 18px; color: #e9ebea; font-size: 14.5px; font-weight: 500;" style-hover="border-color: oklch(0.82 0.13 172 / 0.55); color: #e9ebea;">jaij6309@gmail.com</a>
+      <sc-if value="{{ showPhone }}" hint-placeholder-val="{{ true }}">
+        <a href="tel:+919444432922" style="display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 12px 18px; color: #e9ebea; font-size: 14.5px; font-weight: 500;" style-hover="border-color: oklch(0.82 0.13 172 / 0.55); color: #e9ebea;">+91 94444 32922</a>
+      </sc-if>
+    </div>
+  </header>
+
+  <section style="max-width: 1080px; margin: 0 auto; padding: 0 28px 84px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden;">
+      <div style="background: #0b0c0d; padding: 24px 22px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">Focus</div>
+        <div style="margin-top: 10px; font-size: 17px; font-weight: 500; letter-spacing: -0.01em;">RAG &amp; LLM systems</div>
+      </div>
+      <div style="background: #0b0c0d; padding: 24px 22px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">Also</div>
+        <div style="margin-top: 10px; font-size: 17px; font-weight: 500; letter-spacing: -0.01em;">Real-time computer vision</div>
+      </div>
+      <div style="background: #0b0c0d; padding: 24px 22px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">Education</div>
+        <div style="margin-top: 10px; font-size: 17px; font-weight: 500; letter-spacing: -0.01em;">B.E. CSE — AI &amp; ML, CGPA 8.66</div>
+      </div>
+      <div style="background: #0b0c0d; padding: 24px 22px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">Certified</div>
+        <div style="margin-top: 10px; font-size: 17px; font-weight: 500; letter-spacing: -0.01em;">Oracle OCI Generative AI Pro</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="max-width: 1080px; margin: 0 auto; padding: 0 28px 100px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.09); margin-bottom: 40px;">
+      <h2 style="margin: 0; font-size: 13px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; text-transform: uppercase; color: #7e8784; font-weight: 500;">01 — Selected work</h2>
+      <div style="flex: 1;"></div>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5d6664;">4 projects</span>
+    </div>
+
+    <div style="display: grid; gap: 20px;">
+
+      <article style="border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; padding: 34px; background: linear-gradient(180deg, #0d0f10, #0a0b0c);" style-hover="border-color: oklch(0.82 0.13 172 / 0.35);">
+        <div style="display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start;">
+          <div style="flex: 1 1 340px; min-width: 0;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: oklch(0.82 0.13 172);">RAG · Hybrid search</div>
+            <h3 style="margin: 12px 0 0; font-size: 27px; letter-spacing: -0.02em; font-weight: 600;">CoursePack-QA</h3>
+            <p style="margin: 10px 0 0; color: #a7afac; font-size: 16px; line-height: 1.6; max-width: 56ch; text-wrap: pretty;">An end-to-end Retrieval-Augmented Generation system that answers student questions from course documents.</p>
+            <sc-if value="{{ showDetails }}" hint-placeholder-val="{{ true }}">
+              <ul style="margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 10px;">
+                <li style="display: flex; gap: 12px; color: #9aa3a0; font-size: 15px; line-height: 1.55;"><span style="color: oklch(0.82 0.13 172); font-family: 'JetBrains Mono', monospace; font-size: 12px; padding-top: 3px;">—</span>Implemented hybrid search combining vector embeddings and BM25 for improved retrieval accuracy</li>
+                <li style="display: flex; gap: 12px; color: #9aa3a0; font-size: 15px; line-height: 1.55;"><span style="color: oklch(0.82 0.13 172); font-family: 'JetBrains Mono', monospace; font-size: 12px; padding-top: 3px;">—</span>Integrated a reranking pipeline to provide grounded, citable answers from course materials</li>
+              </ul>
+            </sc-if>
+          </div>
+          <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 18px;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5d6664;">2026</span>
+            <a href="https://github.com/durancodes/coursepack_QA" target="_blank" rel="noopener" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 9px 14px; color: #e9ebea;" style-hover="border-color: oklch(0.82 0.13 172 / 0.6); color: oklch(0.9 0.09 172);">View repo ↗</a>
+          </div>
+        </div>
+        <div style="margin-top: 26px; display: flex; gap: 8px; flex-wrap: wrap;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">pgvector</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">BM25</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">Cross-encoder reranking</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">BGE / MiniLM</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">RAGAS</span>
+        </div>
+      </article>
+
+      <article style="border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; padding: 34px; background: linear-gradient(180deg, #0d0f10, #0a0b0c);" style-hover="border-color: oklch(0.82 0.13 172 / 0.35);">
+        <div style="display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start;">
+          <div style="flex: 1 1 340px; min-width: 0;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: oklch(0.82 0.13 272);">Computer vision · VLM</div>
+            <h3 style="margin: 12px 0 0; font-size: 27px; letter-spacing: -0.02em; font-weight: 600;">Barista Video Analysis</h3>
+            <p style="margin: 10px 0 0; color: #a7afac; font-size: 16px; line-height: 1.6; max-width: 56ch; text-wrap: pretty;">A local computer vision system that analyzes barista POV videos and identifies actions, drink types, visible ingredients, and preparation stages.</p>
+            <sc-if value="{{ showDetails }}" hint-placeholder-val="{{ true }}">
+              <ul style="margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 10px;">
+                <li style="display: flex; gap: 12px; color: #9aa3a0; font-size: 15px; line-height: 1.55;"><span style="color: oklch(0.82 0.13 272); font-family: 'JetBrains Mono', monospace; font-size: 12px; padding-top: 3px;">—</span>Frame sampling and video processing pipelines using OpenCV and yt-dlp</li>
+                <li style="display: flex; gap: 12px; color: #9aa3a0; font-size: 15px; line-height: 1.55;"><span style="color: oklch(0.82 0.13 272); font-family: 'JetBrains Mono', monospace; font-size: 12px; padding-top: 3px;">—</span>Integrated a local vision-language model (Moondream via Ollama) for fully offline inference without paid APIs</li>
+                <li style="display: flex; gap: 12px; color: #9aa3a0; font-size: 15px; line-height: 1.55;"><span style="color: oklch(0.82 0.13 272); font-family: 'JetBrains Mono', monospace; font-size: 12px; padding-top: 3px;">—</span>Event-driven workflow using LlamaIndex Workflows with structured result aggregation and timeline analysis</li>
+                <li style="display: flex; gap: 12px; color: #9aa3a0; font-size: 15px; line-height: 1.55;"><span style="color: oklch(0.82 0.13 272); font-family: 'JetBrains Mono', monospace; font-size: 12px; padding-top: 3px;">—</span>Interactive Gradio interface for frame-by-frame insights and ingredient frequency</li>
+              </ul>
+            </sc-if>
+          </div>
+          <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 18px;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5d6664;">2025</span>
+            <a href="https://github.com/durancodes/barista-video-analysis" target="_blank" rel="noopener" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 9px 14px; color: #e9ebea;" style-hover="border-color: oklch(0.82 0.13 272 / 0.6); color: oklch(0.9 0.09 272);">View repo ↗</a>
+          </div>
+        </div>
+        <div style="margin-top: 26px; display: flex; gap: 8px; flex-wrap: wrap;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">OpenCV</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">Moondream</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">Ollama</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">LlamaIndex Workflows</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">Gradio</span>
+        </div>
+      </article>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+
+        <article style="border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; padding: 30px; background: linear-gradient(180deg, #0d0f10, #0a0b0c); display: flex; flex-direction: column;" style-hover="border-color: oklch(0.82 0.13 172 / 0.35);">
+          <div style="display: flex; align-items: baseline; gap: 12px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: oklch(0.82 0.13 172);">Agents</div>
+            <div style="flex: 1;"></div>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5d6664;">2025</span>
+          </div>
+          <h3 style="margin: 12px 0 0; font-size: 23px; letter-spacing: -0.02em; font-weight: 600;">Weather Agent</h3>
+          <p style="margin: 10px 0 0; color: #a7afac; font-size: 15.5px; line-height: 1.6; text-wrap: pretty;">A ReAct-style AI agent using the Llama-4 LLM with Open-Meteo API integration for real-time weather forecasting, featuring geocoding, strict tool-calling rules, and a CLI interface.</p>
+          <div style="flex: 1; min-height: 20px;"></div>
+          <div style="margin-top: 22px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">Llama-4</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">Tool calling</span>
+            <div style="flex: 1;"></div>
+            <a href="https://github.com/durancodes/simple-weather-agent/blob/main/weather_agent.py" target="_blank" rel="noopener" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px;">Repo ↗</a>
+          </div>
+        </article>
+
+        <article style="border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; padding: 30px; background: linear-gradient(180deg, #0d0f10, #0a0b0c); display: flex; flex-direction: column;" style-hover="border-color: oklch(0.82 0.13 272 / 0.35);">
+          <div style="display: flex; align-items: baseline; gap: 12px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: oklch(0.82 0.13 272);">Robotics · Detection</div>
+            <div style="flex: 1;"></div>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5d6664;">2025</span>
+          </div>
+          <h3 style="margin: 12px 0 0; font-size: 23px; letter-spacing: -0.02em; font-weight: 600;">Autonomous Drone Person Tracking</h3>
+          <p style="margin: 10px 0 0; color: #a7afac; font-size: 15.5px; line-height: 1.6; text-wrap: pretty;">YOLO object detection paired with PID control algorithms and live GPS update rate management, built during the OEG Defence &amp; Aerospace internship.</p>
+          <div style="flex: 1; min-height: 20px;"></div>
+          <div style="margin-top: 22px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">YOLO</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b9491; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px;">PID control</span>
+            <div style="flex: 1;"></div>
+            <a href="https://github.com/durancodes/autonomous-drone-person-tracking/blob/main/drone.py" target="_blank" rel="noopener" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px;">Repo ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" style="max-width: 1080px; margin: 0 auto; padding: 0 28px 100px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.09); margin-bottom: 40px;">
+      <h2 style="margin: 0; font-size: 13px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; text-transform: uppercase; color: #7e8784; font-weight: 500;">02 — Experience</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 40px;">
+      <div>
+        <h3 style="margin: 0; font-size: 24px; letter-spacing: -0.02em; font-weight: 600; text-wrap: balance;">OEG Defence &amp; Aerospace Pvt. Ltd.</h3>
+        <div style="margin-top: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.82 0.13 172); letter-spacing: 0.03em;">Machine Learning Intern</div>
+        <div style="margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5d6664;">June 2025 · India</div>
+      </div>
+      <ul style="margin: 0; padding: 0; list-style: none; display: grid; gap: 14px;">
+        <li style="display: flex; gap: 14px; color: #a7afac; font-size: 16px; line-height: 1.6;"><span style="color: #4d5654; font-family: 'JetBrains Mono', monospace; font-size: 12px; padding-top: 4px;">01</span>Contributed to the development of intelligent drone systems by integrating machine learning and computer vision techniques</li>
+        <li style="display: flex; gap: 14px; color: #a7afac; font-size: 16px; line-height: 1.6;"><span style="color: #4d5654; font-family: 'JetBrains Mono', monospace; font-size: 12px; padding-top: 4px;">02</span>Developed an Autonomous Drone Person Tracking system using YOLO object detection with PID control algorithms and live GPS update rate management</li>
+        <li style="display: flex; gap: 14px; color: #a7afac; font-size: 16px; line-height: 1.6;"><span style="color: #4d5654; font-family: 'JetBrains Mono', monospace; font-size: 12px; padding-top: 4px;">03</span>Assisted in creating a drone-based object detection system using YOLOv8 for real-time target identification</li>
+        <li style="display: flex; gap: 14px; color: #a7afac; font-size: 16px; line-height: 1.6;"><span style="color: #4d5654; font-family: 'JetBrains Mono', monospace; font-size: 12px; padding-top: 4px;">04</span>Supported dataset preparation, annotation, and augmentation workflows through RoboFlow</li>
+        <li style="display: flex; gap: 14px; color: #a7afac; font-size: 16px; line-height: 1.6;"><span style="color: #4d5654; font-family: 'JetBrains Mono', monospace; font-size: 12px; padding-top: 4px;">05</span>Collaborated on Python-based model deployment including real-time camera inference, OpenCV integration, and model fine-tuning</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="stack" style="max-width: 1080px; margin: 0 auto; padding: 0 28px 100px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.09); margin-bottom: 40px;">
+      <h2 style="margin: 0; font-size: 13px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; text-transform: uppercase; color: #7e8784; font-weight: 500;">03 — Stack</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 34px 48px;">
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: oklch(0.82 0.13 172); margin-bottom: 14px;">AI &amp; Machine Learning</div>
+        <p style="margin: 0; color: #cfd4d2; font-size: 16.5px; line-height: 1.7;">RAG, Hybrid Search (Vector + BM25), Reranking, Computer Vision, LLMs, Prompt Engineering, Vector Embeddings (BGE, MiniLM), Cross-Encoders, RAGAS</p>
+      </div>
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: oklch(0.82 0.13 172); margin-bottom: 14px;">Languages &amp; Data</div>
+        <p style="margin: 0; color: #cfd4d2; font-size: 16.5px; line-height: 1.7;">Python, SQL · Pandas, NumPy</p>
+      </div>
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: oklch(0.82 0.13 172); margin-bottom: 14px;">Databases</div>
+        <p style="margin: 0; color: #cfd4d2; font-size: 16.5px; line-height: 1.7;">Vector Databases (pgvector, Redis), SQLite</p>
+      </div>
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: oklch(0.82 0.13 172); margin-bottom: 14px;">MLOps &amp; Tools</div>
+        <p style="margin: 0; color: #cfd4d2; font-size: 16.5px; line-height: 1.7;">Git, GitHub, Docker, Streamlit</p>
+      </div>
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: oklch(0.82 0.13 172); margin-bottom: 14px;">Web</div>
+        <p style="margin: 0; color: #cfd4d2; font-size: 16.5px; line-height: 1.7;">HTML, CSS</p>
+      </div>
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: oklch(0.82 0.13 172); margin-bottom: 14px;">Languages spoken</div>
+        <p style="margin: 0; color: #cfd4d2; font-size: 16.5px; line-height: 1.7;">English, Tamil</p>
+      </div>
+    </div>
+    <div style="margin-top: 40px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07);">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784; margin-bottom: 14px;">Soft skills</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #a7afac; background: rgba(255,255,255,0.04); border-radius: 6px; padding: 7px 12px;">Communication</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #a7afac; background: rgba(255,255,255,0.04); border-radius: 6px; padding: 7px 12px;">Team Collaboration</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #a7afac; background: rgba(255,255,255,0.04); border-radius: 6px; padding: 7px 12px;">Problem Solving</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #a7afac; background: rgba(255,255,255,0.04); border-radius: 6px; padding: 7px 12px;">Leadership</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #a7afac; background: rgba(255,255,255,0.04); border-radius: 6px; padding: 7px 12px;">Critical Thinking</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials" style="max-width: 1080px; margin: 0 auto; padding: 0 28px 110px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.09); margin-bottom: 40px;">
+      <h2 style="margin: 0; font-size: 13px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; text-transform: uppercase; color: #7e8784; font-weight: 500;">04 — Credentials</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+      <div style="border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; padding: 28px; background: #0b0c0d;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">Certifications</div>
+        <div style="margin-top: 20px; display: grid; gap: 16px;">
+          <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=B64C3149B552C4F3C996849A29362F9EEB9C3A9458BF018EEDCE173BE09E7423" target="_blank" rel="noopener" style="display: block; color: #e9ebea; font-size: 16px; line-height: 1.5; border-bottom: 1px solid rgba(255,255,255,0.07); padding-bottom: 16px;" style-hover="color: oklch(0.9 0.09 172);">Oracle Cloud Infrastructure 2025 Certified Generative AI Professional <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5d6664;">↗</span></a>
+          <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=A2A2C650E9119C28CA85AC6D96094A0F3EDBDF6B8A9B0350883782D3D3BA519D" target="_blank" rel="noopener" style="display: block; color: #e9ebea; font-size: 16px; line-height: 1.5;" style-hover="color: oklch(0.9 0.09 172);">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5d6664;">↗</span></a>
+        </div>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; padding: 28px; background: #0b0c0d;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">Achievements</div>
+        <div style="margin-top: 20px; display: grid; gap: 16px;">
+          <div style="color: #e9ebea; font-size: 16px; line-height: 1.5; border-bottom: 1px solid rgba(255,255,255,0.07); padding-bottom: 16px;">Finalist at Cyber Hackathon — Official Hackathon of Greater Chennai Police</div>
+          <div style="color: #e9ebea; font-size: 16px; line-height: 1.5;">Technical Quiz Winner organized by CCC (Campus Corporate Connect)</div>
+        </div>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; padding: 28px; background: #0b0c0d;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">Education</div>
+        <div style="margin-top: 20px;">
+          <div style="color: #e9ebea; font-size: 18px; font-weight: 600; letter-spacing: -0.01em;">Easwari Engineering College</div>
+          <div style="margin-top: 8px; color: #a7afac; font-size: 15.5px; line-height: 1.55;">B.E in Computer Science &amp; Engineering, Artificial Intelligence &amp; Machine Learning</div>
+          <div style="margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5d6664;">
+            <span>Sep 2023 – Apr 2027</span>
+            <span style="color: oklch(0.82 0.13 172);">CGPA 8.66</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid rgba(255,255,255,0.09); background: linear-gradient(180deg, #0a0b0c, #08090a);">
+    <div style="max-width: 1080px; margin: 0 auto; padding: 80px 28px 44px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">Get in touch</div>
+      <h2 style="margin: 18px 0 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -0.03em; font-weight: 600; max-width: 20ch; text-wrap: balance;">Open to AI engineering roles and collaborations.</h2>
+      <div style="margin-top: 34px; display: flex; flex-wrap: wrap; gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden;">
+        <a href="mailto:jaij6309@gmail.com" style="background: #0b0c0d; padding: 22px; display: block; flex: 1 1 190px;" style-hover="background: #101314;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">Email</div>
+          <div style="margin-top: 8px; color: #e9ebea; font-size: 15.5px;">jaij6309@gmail.com</div>
+        </a>
+        <a href="tel:+919444432922" style="background: #0b0c0d; padding: 22px; display: block; flex: 1 1 190px;" style-hover="background: #101314;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">Phone</div>
+          <div style="margin-top: 8px; color: #e9ebea; font-size: 15.5px;">+91 94444 32922</div>
+        </a>
+        <a href="https://github.com/durancodes" target="_blank" rel="noopener" style="background: #0b0c0d; padding: 22px; display: block; flex: 1 1 190px;" style-hover="background: #101314;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">GitHub</div>
+          <div style="margin-top: 8px; color: #e9ebea; font-size: 15.5px;">github.com/durancodes ↗</div>
+        </a>
+        <a href="https://www.linkedin.com/in/duranjai-v-a9b05021a" target="_blank" rel="noopener" style="background: #0b0c0d; padding: 22px; display: block; flex: 1 1 190px;" style-hover="background: #101314;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">LinkedIn</div>
+          <div style="margin-top: 8px; color: #e9ebea; font-size: 15.5px;">in/duranjai-v ↗</div>
+        </a>
+        <a href="https://medium.com/@jaij6309" target="_blank" rel="noopener" style="background: #0b0c0d; padding: 22px; display: block; flex: 1 1 190px;" style-hover="background: #101314;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #7e8784;">Medium</div>
+          <div style="margin-top: 8px; color: #e9ebea; font-size: 15.5px;">@jaij6309 ↗</div>
+        </a>
+      </div>
+      <div style="margin-top: 44px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #4d5654;">
+        <span>Duranjai Venkatachalapathi</span>
+        <span style="flex: 1;"></span>
+        <span>AI Engineer · 2026</span>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPhone&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showDetails&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = document.body;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._cleanup = [];
+    const on = (t, e, f, o) => { t.addEventListener(e, f, o); this._cleanup.push(() => t.removeEventListener(e, f, o)); };
+
+    // ---- scroll reveal (stagger by group) ----
+    const groups = [
+      'section > div[style*="grid-template-columns"] > div',
+      'section#work article',
+      'section#work > div > div:first-child',
+      'section#experience > div > div, section#experience li',
+      'section#stack > div > div',
+      'section#credentials > div > div',
+      'footer h2, footer > div > div a, footer > div > div:last-child'
+    ];
+    const targets = [];
+    groups.forEach(sel => {
+      root.querySelectorAll(sel).forEach((el, i) => {
+        if (targets.includes(el) || el.closest('[data-glow]')) return;
+        el.style.willChange = 'opacity, transform';
+        if (!reduce) {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(22px) scale(0.985)';
+          el.style.transition = 'opacity 700ms cubic-bezier(0.22,1,0.36,1) ' + Math.min(i * 60, 360) + 'ms, transform 700ms cubic-bezier(0.22,1,0.36,1) ' + Math.min(i * 60, 360) + 'ms';
+        }
+        targets.push(el);
+      });
+    });
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    if (!reduce && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
+      }), { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+      targets.forEach(el => io.observe(el));
+      this._cleanup.push(() => io.disconnect());
+      this._fallback = setTimeout(() => targets.forEach(show), 2600);
+    }
+
+    // ---- neural-net canvas background ----
+    const cv = root.querySelector('canvas[data-neural]');
+    if (cv && !reduce) {
+      const ctx = cv.getContext('2d');
+      let W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+      let nodes = [];
+      const pointer = { x: -9999, y: -9999 };
+      const resize = () => {
+        W = cv.clientWidth; H = cv.clientHeight;
+        cv.width = W * dpr; cv.height = H * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        const count = Math.round(Math.min(80, Math.max(28, (W * H) / 26000)));
+        nodes = Array.from({ length: count }, () => ({
+          x: Math.random() * W, y: Math.random() * H,
+          vx: (Math.random() - 0.5) * 0.19, vy: (Math.random() - 0.5) * 0.19,
+          r: Math.random() * 1.3 + 0.7,
+          ph: Math.random() * Math.PI * 2
+        }));
+      };
+      resize();
+      on(window, 'resize', resize);
+      on(window, 'pointermove', ev => { pointer.x = ev.clientX; pointer.y = ev.clientY; }, { passive: true });
+      on(window, 'pointerleave', () => { pointer.x = pointer.y = -9999; });
+
+      let t = 0, frame = 0;
+      const LINK = 132;
+      const tick = () => {
+        frame = requestAnimationFrame(tick);
+        t += 0.016;
+        ctx.clearRect(0, 0, W, H);
+        for (const n of nodes) {
+          n.x += n.vx; n.y += n.vy;
+          if (n.x < -20) n.x = W + 20; if (n.x > W + 20) n.x = -20;
+          if (n.y < -20) n.y = H + 20; if (n.y > H + 20) n.y = -20;
+          const dx = pointer.x - n.x, dy = pointer.y - n.y;
+          const d2 = dx * dx + dy * dy;
+          if (d2 < 42000 && d2 > 1) { const f = 0.00006; n.vx += dx * f; n.vy += dy * f; }
+          n.vx = Math.max(-0.5, Math.min(0.5, n.vx * 0.995));
+          n.vy = Math.max(-0.5, Math.min(0.5, n.vy * 0.995));
+        }
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const a = nodes[i], b = nodes[j];
+            const dx = a.x - b.x, dy = a.y - b.y;
+            const dist = Math.hypot(dx, dy);
+            if (dist > LINK) continue;
+            const base = (1 - dist / LINK) * 0.3;
+            // signal travelling along the edge
+            const pulse = 0.5 + 0.5 * Math.sin(t * 1.6 + a.ph + b.ph);
+            ctx.strokeStyle = 'rgba(120, 233, 209,' + (base * (0.35 + 0.65 * pulse)).toFixed(3) + ')';
+            ctx.lineWidth = 0.6;
+            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+            if (pulse > 0.985) {
+              const px = a.x + (b.x - a.x) * ((t * 0.35) % 1), py = a.y + (b.y - a.y) * ((t * 0.35) % 1);
+              ctx.fillStyle = 'rgba(160, 240, 220, 0.5)';
+              ctx.beginPath(); ctx.arc(px, py, 1.1, 0, 6.284); ctx.fill();
+            }
+          }
+        }
+        for (const n of nodes) {
+          const glowP = 0.55 + 0.45 * Math.sin(t * 1.1 + n.ph);
+          ctx.fillStyle = 'rgba(140, 236, 214,' + (0.22 + 0.3 * glowP).toFixed(3) + ')';
+          ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, 6.284); ctx.fill();
+        }
+      };
+      tick();
+      this._cleanup.push(() => cancelAnimationFrame(frame));
+    }
+
+    // ---- cursor glow + card spotlight ----
+    const glow = root.querySelector('[data-glow]');
+    const cards = Array.from(root.querySelectorAll('section#work article, section#credentials > div > div'));
+    cards.forEach(c => {
+      c.style.transition = 'transform 450ms cubic-bezier(0.22,1,0.36,1), border-color 300ms ease, box-shadow 450ms ease';
+      c.style.position = 'relative';
+      c.style.overflow = 'hidden';
+      const spot = document.createElement('div');
+      spot.style.cssText = 'position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity 300ms ease;background:radial-gradient(320px circle at 50% 50%, oklch(0.82 0.13 172 / 0.10), transparent 70%);';
+      c.appendChild(spot);
+      on(c, 'pointermove', ev => {
+        const r = c.getBoundingClientRect();
+        const x = ev.clientX - r.left, y = ev.clientY - r.top;
+        spot.style.background = 'radial-gradient(320px circle at ' + x + 'px ' + y + 'px, oklch(0.82 0.13 172 / 0.12), transparent 70%)';
+        if (!reduce) {
+          const rx = ((y / r.height) - 0.5) * -3, ry = ((x / r.width) - 0.5) * 3;
+          c.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-3px)';
+        }
+      });
+      on(c, 'pointerenter', () => { spot.style.opacity = '1'; c.style.boxShadow = '0 24px 60px -30px oklch(0.82 0.13 172 / 0.35)'; });
+      on(c, 'pointerleave', () => { spot.style.opacity = '0'; c.style.transform = 'none'; c.style.boxShadow = 'none'; });
+    });
+
+    if (glow && !reduce) {
+      on(window, 'pointermove', ev => {
+        glow.style.opacity = '1';
+        glow.style.background = 'radial-gradient(420px circle at ' + ev.clientX + 'px ' + ev.clientY + 'px, oklch(0.82 0.13 172 / 0.055), transparent 65%)';
+      }, { passive: true });
+    }
+
+    // ---- pill / button micro-interactions ----
+    root.querySelectorAll('header a[href], footer a[href], section#work a[href]').forEach(a => {
+      a.style.transition = 'transform 280ms cubic-bezier(0.22,1,0.36,1), border-color 250ms ease, background 250ms ease, color 250ms ease';
+      on(a, 'pointerenter', () => { if (!reduce) a.style.transform = 'translateY(-2px)'; });
+      on(a, 'pointerleave', () => { a.style.transform = 'none'; });
+    });
+
+    // ---- scroll progress + nav active link ----
+    const bar = root.querySelector('[data-progress]');
+    const navLinks = Array.from(root.querySelectorAll('nav a[href^="#"]'));
+    const sections = navLinks.map(a => root.querySelector(a.getAttribute('href'))).filter(Boolean);
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const h = document.documentElement;
+        const max = h.scrollHeight - h.clientHeight;
+        if (bar) bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+        let active = -1;
+        sections.forEach((s, i) => { if (s.getBoundingClientRect().top <= 140) active = i; });
+        navLinks.forEach((a, i) => {
+          if (!a.getAttribute('href').startsWith('#')) return;
+          a.style.color = i === active ? '#e9ebea' : '#9aa3a0';
+        });
+      });
+    };
+    on(window, 'scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._fallback);
+    (this._cleanup || []).forEach(f => f());
+  }
+
+  renderVals() {
+    return {
+      showPhone: this.props.showPhone ?? true,
+      showDetails: this.props.showDetails ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
